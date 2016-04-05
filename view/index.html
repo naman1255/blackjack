@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!--
+    This webpage used images from:
+        For background:
+            http://westsacolg.com/background-green-1600x1200/
+        For cards:
+            http://deckofcardsapi.com/
+        For back card:
+            https://upload.wikimedia.org/wikipedia/commons/3/30/Card_back_05a.svg
+    Also:
+        AdBlock Plus will block some picture, such as an Ace Diamond
+-->
+
+<head>
+    <!-- JQuery Source -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <!-- Material Design -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <!-- Local Sources -->
+    <script src="../controller/controller.js"></script>
+    <script src="view.js"></script>
+    <script src="../model/model.js"></script>
+
+    <!-- Style -->
+    <style>
+        body {
+            padding: 10px 30px 50px 80px;
+            background-image: url("http://westsacolg.com/wp-content/uploads/2015/07/Background-Green-1600x1200.png");
+        }
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Blackjack</h1>
+    </div>
+    <div id="container">
+        <div id="dealer"></div>
+        <div id="player"></div>
+        <div id="winner"></div>
+        <div id="controls">
+            <button class="btn-large waves-effect waves-light blue" type="button" id="hit" onclick="cHit(event)" disabled="true">Hit</button>
+            <button class="btn-large waves-effect waves-light blue" type="button" id="stand" onclick="cStand()" disabled="true">Stand</button>
+            <button class="btn-large waves-effect waves-light green" type="button" onclick="newRound()">New Round</button>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
